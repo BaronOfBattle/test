@@ -7,7 +7,18 @@
 </head>
 <body>
     <div class="header">
-        <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png" alt="Ícone de Localização"></span>DESHARE </span></h1>
+        <div class="header">
+            <h1 class="title">R<span class="location-icon"><img src="icone_localizacao.png"
+                        alt="Ícone de Localização"></span>DESHARE
+            </h1>
+            <div class="menu">
+                 
+                 <a href="criarviagem.html"><span class="menu-icon"><img src="menu.jpeg" alt="Ícone de Menu"></span></a>
+                </div>
+            </div>
+        </div>
+            </div>
+        </div>
     </div>
     <hr>
     <div class="container">
@@ -47,25 +58,44 @@
                     <p>SESC - Santo Amaro</p>
                     <p>Terminal integrado Pelópidas</p>
                 </div>
+                <div class="rectangle2">
+                    <p>10 de abr - 09:30</p>
+                    <p>SESC - Santo Amaro</p>
+                    <p>Terminal integrado Pelópidas</p>
+                </div>
+                <div class="rectangle2">
+                    <p>09 de abr - 10:45</p>
+                    <p>SESC - Santo Amaro</p>
+                    <p>Terminal integrado Pelópidas</p>
+                </div>
+                <div class="rectangle2">
+                    <p>07 de abr - 13:20</p>
+                    <p>SESC - Santo Amaro</p>
+                    <p>Terminal integrado Pelópidas</p>
+                </div>
+                <div class="rectangle2">
+                    <p>06 de abr - 15:55</p>
+                    <p>SESC - Santo Amaro</p>
+                    <p>Terminal integrado Pelópidas</p>
+                </div>
+                
             </div>
         </div>
     </div>
-
-    <!-- Botão Salvar -->
     <button id="saveButton" style="display: none;">Salvar Imagem</button>
 
-    <!-- JavaScript -->
+  
 
-    <!-- Estilos -->
+ 
     <style>
-        /* reset de estilinhos */
+     
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
 
-        /* fonte */
+     
         @font-face {
             font-family: 'Poppins-Bold';
             src: url('Poppins-Bold.ttf') format('truetype');
@@ -73,7 +103,6 @@
             font-style: normal;
         }
 
-        /* estilinho */
         body {
             font-family: 'Poppins-Bold', sans-serif;
             background-color: #ffffff;
@@ -81,14 +110,46 @@
         }
 
         .header {
-            text-align: left;
-            margin-bottom: 20px;
+    text-align: left;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start; 
+    position: fixed; 
+    top: 40px; 
+    right: 20px; 
+    ;
+}
+
+.menu-icon img {
+            width: 50px; 
+            height: 50px; 
         }
 
-        .title {
-            display: inline-block;
-            margin-right: 10px; 
-        }
+.perfil {
+    margin-right: 10px;
+}
+
+#perfil-img {
+    width: 100%;
+}
+
+.img img {
+    width: 45px;
+    height: auto;
+}
+
+.title {
+    display: inline-block;
+    margin-bottom: -20px;
+  margin-top: 20px;
+}
+
 
         .location-icon {
             color: #79C61E; 
@@ -96,53 +157,57 @@
             vertical-align: middle; 
         }
 
+
+        
         .circle {
-            width: 100px;
-            height: 100px;
+            width: 120px;
+            height: 120px;
             background-color: #d3dadf;
             border-radius: 50%;
-            margin-top: 40px;
+            margin-top: 50px;
             margin-left: 20px;
             cursor: pointer;
-            overflow: hidden; /* Adicionado */
-            position: relative; /* Adicionado */
+            overflow: hidden; 
+            position: relative; 
         }
 
         .info {
-    margin-top: -100px;
-    text-align: right; /* alinhar o texto na direita */
+    margin-top: -120px;
+    text-align: right; 
     margin-right: 20px;
+    font-size: 18px;
 }
 
 .rectangle {
-    width: 40px; /* largura */
-    height: 20px; /* altura*/
+    width: 40px; 
+    height: 20px; 
     background-color: #d3dadf;
     border-radius: 35%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-left: auto; /* começando do lado direito */
+    margin-left: auto; 
     margin-right: 0;
+    
 }
 
 .rating {
-    font-size: 12px; /* tamanho do 4.9 */
+    font-size: 12px; 
 }
 
 .star {
-    font-size: 12px; /* tamanho da estrela */
+    font-size: 12px; 
     color: rgb(0, 0, 0);
-    margin-left: 3px; /* espaço entre o numero e a estrela */
+    margin-left: 3px;
 }
 
         .circle img {
-            position: absolute; /* Adicionado */
-            top: 0; /* Adicionado */
-            left: 0; /* Adicionado */
-            width: 100%; /* Adicionado */
-            height: 100%; /* Adicionado */
-            object-fit: cover; /* Adicionado */
+            position: absolute; 
+            top: 0; 
+            left: 0;
+            width: 100%; 
+            height: 100%; 
+            object-fit: cover; 
         }
 
         .viagens {
@@ -151,23 +216,23 @@
         }
 
         .rectangle2 {
-            width: 370px; 
+            width: 100%; 
             height: 135px; 
             margin-top: 18px;
             background-color: #d3dadf;
             border-radius: 5%;
             margin-left: 10px;
-            padding: 20px; /* espaço interno */
+            padding: 20px; 
         }
 
         .rectangle2 p {
-            margin: 5px 0; /* espaço entre as linhas */
-            text-align: left; /* alinha na esquerda */
+            margin: 5px 0; 
+            text-align: left; 
             color: black;
         }
     </style>
 
-    <!-- Input de Galeria -->
+ 
     <input type="file" accept="image/png, image/jpeg" id="galleryInput" style="display: none;">
     <script>
         document.getElementById('circle').addEventListener('click', function() {

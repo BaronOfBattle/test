@@ -48,7 +48,7 @@ self.addEventListener('activate', event => {
     );
 });
 
-// Intercepta as solicitações e retorna os recursos armazenados em cache, se disponíveis
+
 self.addEventListener('fetch', event => {
     event.respondWith(
         caches.match(event.request)
